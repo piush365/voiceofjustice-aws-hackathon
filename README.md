@@ -1,119 +1,165 @@
-# VoiceOfJustice - AWS AI for Bharat Hackathon Submission
+# 🎙️ VoiceOfJustice  
+### AI Legal Assistant for All
 
-## Project Overview
-**VoiceOfJustice** is an AI-powered legal assistant that democratizes access to justice for India's 600M+ underserved population through conversational AI, smart document generation, and proactive case guidance.
+[![AWS AI for Bharat Hackathon](https://img.shields.io/badge/AWS-AI%20for%20Bharat%20Hackathon-FF9900?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
 
-## 🎯 Problem We're Solving
-- 4.3 billion people globally lack meaningful access to justice
-- 600M+ Indians cannot afford legal consultation (₹3,000-5,000 average cost)
-- 70% of court cases pending due to improper documentation
-- Legal language requires 12+ years of education to comprehend
+> **Democratizing Legal Access for India’s 600M+ Underserved Population**
+
+**VoiceOfJustice** is an AI-powered legal assistant that removes barriers to justice using conversational AI, multilingual support, smart document generation, and proactive legal guidance — making legal help accessible to everyone, not just the privileged.
+
+---
+
+## 🎯 The Problem
+
+Legal justice in India faces a massive accessibility crisis:
+
+- 🌍 **4.3 billion people** globally lack meaningful access to justice  
+- 🇮🇳 **600M+ Indians** cannot afford legal consultation (₹3,000–₹5,000 avg.)
+- 🏡 **84% of rural Indians** have never consulted a lawyer
+- 📄 **70% of court delays** are caused by incorrect documentation
+- 📚 Legal language requires **12+ years of education** to understand
+- ⚖️ **35 million cases** pending in Indian district courts
+
+---
 
 ## 💡 Our Solution
-VoiceOfJustice provides:
-1. **Conversational Legal Navigator**: Voice + text in 10+ Indian languages
-2. **Smart Document Generator**: Auto-generate legal notices, complaints, RTI applications
-3. **Justice Copilot** (WOW Feature): AI analyzes evidence, predicts case strength, proactive guidance
-4. **Court Process Roadmap**: Step-by-step guidance with timelines
-5. **Pro-Bono Lawyer Marketplace**: Connect with verified lawyers at subsidized rates
 
-## 📁 Submission Files
+**VoiceOfJustice** delivers end-to-end legal assistance powered by AI.
 
-### 1. GitHub Repository Files (Mandatory)
-Upload these files to your GitHub repository:
-- `requirements.md` - Complete product specification (generated via Kiro)
-- `design.md` - Technical architecture and design (generated via Kiro)
-- `README.md` - This file
+### 🗣️ 1. Conversational Legal Navigator
+- Supports **10+ Indian languages** (Hindi, Tamil, Bengali, Marathi, etc.)
+- Voice + text input with Indian accent recognition
+- Context-aware conversations that remember case history
 
-### 2. Presentation (Mandatory)
-- `VoiceOfJustice_Presentation.pdf` - Final presentation in PDF format (as required)
-- `VoiceOfJustice_Presentation.pptx` - Source PowerPoint file (optional, for reference)
+### 📄 2. Smart Document Generator
+- Auto-generates court-ready documents:
+  - Legal Notices  
+  - Consumer Complaints  
+  - RTI Applications  
+  - FIR Drafts  
+- **Dual-view output**: Legal language ↔ Plain language
+- State-specific legal rules
+- Export as **PDF / DOCX**
 
-## 🚀 How to Use Kiro (As Per Instructions)
+### 🤖 3. Justice Copilot (WOW Feature)
+- **AI Evidence Analyzer**  
+  Upload WhatsApp chats, emails, photos → extracts legally relevant facts
+- **Case Strength Predictor**  
+  Real-time score (0–100) + improvement suggestions
+- **Proactive Alerts**  
+  _“Your 15-day notice period ends tomorrow”_
+- Learns from **10,000+ similar cases**
 
-The hackathon requires generating requirements.md and design.md using Kiro:
+### 🗺️ 4. Court Process Roadmap
+- Step-by-step timeline: problem → resolution
+- Preparation tips for every stage
+- Live case status via **eCourts integration**
 
-1. **Download Kiro**: https://kiro.dev/downloads/?trk=78a2a745-7f5a-4b7f-9b32-8de81b7194b6&sc_channel=el
+### ⚖️ 5. Pro-Bono Lawyer Marketplace
+- AI handles **90%** (understanding + documentation)
+- Lawyers handle **final 10%** (court representation)
+- Affordable pricing: ₹500 review vs ₹5,000 consultation
 
-2. **Use Kiro's "Spec > Design" flow**:
-   - Input: "VoiceOfJustice - AI-powered legal assistant for underserved Indians. Features: conversational AI in 10+ languages, document generation, evidence analysis with case strength scoring, court process guidance, and lawyer marketplace."
-   - Kiro will generate requirements.md and design.md files
+---
 
-3. **Review and Refine**:
-   - We've already created comprehensive requirements.md and design.md files for you
-   - You can either:
-     - **Option A**: Use our pre-generated files directly (they're professional and comprehensive)
-     - **Option B**: Input our content into Kiro to generate your own version
-     - **Option C**: Refine our files using Kiro's iterative prompting
 
-4. **Export from Kiro**:
-   - Use Kiro's export function to save requirements.md and design.md
-   - Upload both files to your GitHub repository
+📌 **Detailed design:** [`design.md`](design.md)
 
-5. **Submit GitHub Repo Link**:
-   - Submit the GitHub repository URL containing requirements.md and design.md
-
-## 📊 Key Metrics & Impact
-
-**Cost Savings**: ₹4,500 average per user  
-**Time Savings**: 2.5 weeks average per user  
-**Target Users**: 600M+ underserved Indians  
-**Economic Impact**: ₹500 crore saved annually at scale  
-
-**Success Metrics (6 months)**:
-- 10,000 users
-- 1,000 legal documents generated
-- 70% activation rate
-- 75% case success rate
+---
 
 ## 🛠️ Technology Stack
 
-**Frontend**: React Native, Next.js, WhatsApp Bot (Twilio)  
-**Backend**: Python FastAPI, PostgreSQL, Redis  
-**AI/ML**: GPT-4/Claude, Pinecone (RAG), Multilingual BERT  
-**AWS**: ECS Fargate, RDS, S3, CloudFront, API Gateway  
-**Speech**: Google Cloud Speech-to-Text for Indian languages  
+### Frontend
+- **Mobile**: React Native
+- **Web**: Next.js + React
+- **Messaging**: WhatsApp Bot (Twilio)
+
+### Backend
+- **API**: FastAPI (Python)
+- **Database**: PostgreSQL, Redis
+- **Storage**: AWS S3 + CloudFront
+- **Async Tasks**: Celery + Redis
+
+### AI / ML
+- **LLMs**: GPT-4 / Claude
+- **RAG**: Pinecone (10K+ legal docs)
+- **NLP**: Multilingual BERT
+- **Speech**: Indian-accent STT
+- **OCR**: Tesseract
+
+### AWS Infrastructure
+- ECS Fargate (Auto-scaling)
+- RDS PostgreSQL (Multi-AZ)
+- ElastiCache Redis
+- API Gateway + CloudFront
+
+---
+
+## 📊 Impact Metrics
+
+### User Impact
+- 💰 **₹4,500 saved per user**
+- ⏱️ **2.5 weeks faster resolution**
+- ✅ **75% favorable outcomes**
+
+### Scale Impact
+- 🎯 **600M+ target users**
+- 💸 **₹500 crore annual savings**
+- 🌍 Aligns with **UN SDG 16**
+
+---
 
 ## 💰 Business Model
 
-**Free Tier**: Unlimited consultations, basic document generation  
-**Premium (₹99/month)**: Multiple cases, priority lawyer matching  
-**B2B**: NGO/CSR licenses at ₹50K/year  
-**Marketplace**: 15% commission on lawyer consultations  
+### Free Tier
+- Unlimited legal chats
+- Basic document generation
+- 1 active case
 
-**Unit Economics**: LTV:CAC = 24:1
+### Premium — ₹99/month
+- Up to 5 active cases
+- Advanced evidence analysis
+- Priority lawyer access
 
-## 🎯 Go-to-Market Strategy
+### B2B / NGO
+- CSR licenses: ₹50,000/year
+- White-label deployments
 
-**Phase 1** (Months 1-3): MVP in Maharashtra + Karnataka, 3 legal categories  
-**Phase 2** (Months 4-6): Expand to Delhi NCR, add lawyer marketplace  
-**Phase 3** (Months 7-12): Pan-India expansion, 20 legal categories  
+### Marketplace
+- 15% commission on lawyer services
 
-## 📧 Contact
-
-Team Name: JusticeForAll  
-Team Leader: [Your Name]  
-Email: [Your Email]  
-
----
-
-## Submission Checklist
-
-- [ ] Create GitHub repository
-- [ ] Upload requirements.md (generated via Kiro)
-- [ ] Upload design.md (generated via Kiro)
-- [ ] Upload README.md (this file)
-- [ ] Submit GitHub repository link
-- [ ] Submit VoiceOfJustice_Presentation.pdf
-- [ ] Verify all files are accessible
+📈 **LTV : CAC = 24 : 1**
 
 ---
 
-**Note**: Our pre-generated requirements.md and design.md files are comprehensive and professional. You can use them directly or refine them using Kiro's iterative prompting feature. The files include:
-- Detailed functional and non-functional requirements
-- Complete system architecture with diagrams
-- Database schemas and API specifications
-- Security, performance, and scalability considerations
-- Implementation roadmap and success metrics
+## 🚀 Roadmap
 
-Good luck with your submission! 🚀
+### Phase 1 — MVP
+- Maharashtra + Karnataka
+- 3 legal categories
+- 1,000 users
+
+### Phase 2 — Expansion
+- Delhi NCR
+- 10 legal categories
+- Lawyer marketplace
+
+### Phase 3 — Scale
+- Pan-India rollout
+- Government partnerships
+- 10,000+ users
+
+---
+
+
+## 🔧 Getting Started
+
+### Prerequisites
+- Python 3.11+
+- Node.js 18+
+- Docker
+- AWS Account
+- OpenAI / Anthropic API Keys
