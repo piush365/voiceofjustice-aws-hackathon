@@ -7,6 +7,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# AWS credentials — set these in the Vercel dashboard (Settings > Environment Variables).
+# Locally, use ~/.aws/credentials or set them in backend/.env.
+# Required: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+
 AWS_REGION = os.getenv('AWS_REGION', 'ap-south-1')
 
 BEDROCK_MODEL_ID = os.getenv(
@@ -15,11 +19,13 @@ BEDROCK_MODEL_ID = os.getenv(
 )
 
 # Comma-separated list of allowed origins for CORS.
-# Example: "http://localhost:5173,https://voiceofjustice.app"
-CORS_ALLOW_ORIGINS: List[str] = os.getenv(
+# Vercel deployments are auto-allowed via the *.vercel.app default.
+# Example: "http://localhost:5173,https://voiceofjustice.vercel.app"
+_cors_raw = os.getenv(
     'CORS_ALLOW_ORIGINS',
-    'http://localhost:5173',
-).split(',')
+    'http://localhost:5173,http://localhost:5174',
+)
+CORS_ALLOW_ORIGINS: List[str] = [o.strip() for o in _cors_raw.split(',') if o.strip()]
 
 # Optional API key for authenticating requests to protected endpoints.
 # When unset or empty, authentication is disabled (useful for local dev).
